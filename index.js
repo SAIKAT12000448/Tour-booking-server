@@ -54,10 +54,7 @@ async function run() {
 
 
     // get my orders
-    app.get('/mybooking/:displayname',async(req,res)=>{
-      
-           
-    })
+    
 
 
     
