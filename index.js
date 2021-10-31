@@ -2,7 +2,7 @@ const express = require('express')
 const { MongoClient } = require('mongodb')
 const app = express()
 const ObjectId = require('mongodb').ObjectId;
-const port = 5000
+const port = process.env.PORT||5000
 const cors = require('cors')
 require('dotenv').config();
 
@@ -51,6 +51,14 @@ async function run() {
       const book = await planCollection.findOne(query);
       res.json(book);
     })
+
+
+    // get my orders
+    app.get('/mybooking/:displayname',async(req,res)=>{
+      
+           
+    })
+
 
     
     
